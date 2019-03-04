@@ -36,5 +36,3 @@ class CurrentQuestion extends Component {
 }
 
 export default CurrentQuestion;
-
-// info = <h3>{this.state.question.current}</h3>
