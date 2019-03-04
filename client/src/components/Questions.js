@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import CurrentQuestion from './CurrentQuestion'
 
 const QUESTION_BASE_URL = 'https://opentdb.com/api.php?amount='
+
+// Create a new component CURRENT_QUESTION and send the current question as a prop
+// and use componentWillRecieveProps lifecycle
+
 
 class Questions extends Component {
 
   state = {
-    questionInfo: []
+    questionInfo: [],
+    currentQuestion: []
   }
 
   getQuestions = () => {
@@ -16,18 +22,35 @@ class Questions extends Component {
         this.setState({
           questionInfo
         })
-      }).then(console.log(this.state))
+      }).then(()=>{
+        this.setCurrent()
+      })
+      // .then(console.log(this.state))
       .catch(function (error) {
         console.log(error);
       });
   }
 
+  setCurrent = () => {
+    this.setState({
+      currentQuestion: this.state.questionInfo[0]
+    })
+  }
+
 
   render() {
+
+    // if(this.state.questionInfo > 0){
+    //   console.log(this.state.questionInfo)
+    // }
+
+    console.log(this.state.questionInfo)
+
     return (
       <div className="Questions">
         Questions
         <button onClick={this.getQuestions}>Get Questions</button>
+        <CurrentQuestion current={this.state.currentQuestion}/>
       </div>
     );
   }
