@@ -25,7 +25,6 @@ class Questions extends Component {
       }).then(()=>{
         this.setCurrent()
       })
-      // .then(console.log(this.state))
       .catch(function (error) {
         console.log(error);
       });
@@ -39,12 +38,6 @@ class Questions extends Component {
 
 
   render() {
-
-    // if(this.state.questionInfo > 0){
-    //   console.log(this.state.questionInfo)
-    // }
-
-    console.log(this.state.questionInfo)
 
     return (
       <div className="Questions">

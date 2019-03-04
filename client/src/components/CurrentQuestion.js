@@ -22,7 +22,8 @@ class CurrentQuestion extends Component {
       info = <h3>Loading...</h3>
     } else {
       info = <div>
-        <h4>{this.state.question.current.question}</h4>
+        <h4><u>Question</u></h4>
+          <h5>{this.state.question.current.question}</h5>
         <label>{this.state.question.current.correct_answer}</label>
       </div>
     }
