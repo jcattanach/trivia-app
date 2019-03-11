@@ -24,8 +24,7 @@ const categoryArray = [
 {id: 27, name: "Animals"},
 {id: 28, name: "Vehicles"},
 {id: 29, name: "Entertainment: Comics"},
-{id: 30, name: "Science: Gadgets"},
-{id: 32, name: "Entertainment: Cartoon & Animations"}
+{id: 30, name: "Science: Gadgets"}
 ]
 
 class Questions extends Component {
