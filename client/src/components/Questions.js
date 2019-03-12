@@ -20,7 +20,6 @@ const categoryArray = [
 {id: 23, name: "History"},
 {id: 24, name: "Politics"},
 {id: 25, name: "Art"},
-{id: 26, name: "Celebrities"},
 {id: 27, name: "Animals"},
 {id: 28, name: "Vehicles"},
 {id: 29, name: "Entertainment: Comics"}
